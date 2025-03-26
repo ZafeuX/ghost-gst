@@ -1,0 +1,9 @@
+[package]
+name = "ghost-gst"
+version = "0.1.0"
+edition = "2021"
+authors = ["Zafêu <zafeudev@gmail.com>"]
+description = "Ultra-fast, secure remote access tool"
+license = "MPL-2.0"
+
+[dependencies]
