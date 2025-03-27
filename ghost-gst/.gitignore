@@ -13,3 +13,8 @@ vendor/
 *.tmp
 *.old
 *.orig
+/server/target/
+/server/**/*.rs.bk
+/server/Cargo.lock
+/server/.vscode/
+/server/.idea/

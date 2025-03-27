@@ -1,9 +1,10 @@
 [package]
 name = "ghost-gst"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2021"
 authors = ["Zafêu <zafeudev@gmail.com>"]
 description = "Ultra-fast, secure remote access tool"
 license = "MPL-2.0"
 
 [dependencies]
+rand = "0.9.0"

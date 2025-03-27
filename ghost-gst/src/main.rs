@@ -1,5 +1,9 @@
 use ghost_gst::{CliArgs, Config, Connection};
 
+// Define a default connection type with compile-time parameters
+type DefaultConnection = Connection<100, 30000, 200, 10>;
+// 100ms base, 30s max, 2.0 factor, 0.1 jitter
+
 fn main() {
     let args = match CliArgs::parse() {
         Ok(args) => args,
@@ -30,7 +34,7 @@ fn main() {
 
     println!("Attempting to connect to {}:{}", config.host, config.port);
 
-    match Connection::new(&config.host, config.port) {
+    match DefaultConnection::new(&config.host, config.port, 5) {
         Ok(mut connection) => {
             println!("Connected successfully!");
             if let Err(e) = connection.send("Hello from Ghost (gst)!") {
